@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3f2iym4fx4tp"]
+
+[ext_resource type="Texture2D" uid="uid://b64hgk82axof1" path="res://assets/sprites/mouthA.png" id="1_780bu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p1r5x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_780bu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1ipw"]
+size = Vector2(69, 37)
+
+[node name="Hero" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(112, 317)
+sprite_frames = SubResource("SpriteFrames_p1r5x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(112.5, 315.5)
+shape = SubResource("RectangleShape2D_u1ipw")
